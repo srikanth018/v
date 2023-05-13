@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: rgb(255, 208, 165);
+ 
+  border-radius: 20px;
+  width: 25%;
+  height: 800px;
+  margin: 50px;
+  margin-left: 37%;
+}
+
+
+</style>
+</head>
+
+
+<body>
+ 
+<center><h2 style="color: rgb(16, 75, 184);">Demonstrating Mouse Events</h2></center>
+<div>
+<br>
+<center> <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</h1></center>
+<br>
+
+<center><img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="smiley.png" alt="Smiley" width="32" height="32"></center><br><br>
+
+
+
+<center><button onclick="my()">Click me</button></center>
+<center><p id="d"></p></center>
+
+</div>
+
+<script>
+    function mouseOver() {
+      document.getElementById("demo").style.color = "red";
+    }
+    function mouseOut() {
+      document.getElementById("demo").style.color = "black";
+    }
+
+    function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+
+
+<script>
+  function my() {
+    document.getElementById("d").innerHTML = "Hello Everyone!";
+  }
+  </script>
+
+</body>
+</html>
